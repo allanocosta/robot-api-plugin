@@ -25,3 +25,4 @@ spec:
       trigger: after-render
       commands:
         - pip install robotframework-requests
+        - pip install robotframework-jsonlibrary

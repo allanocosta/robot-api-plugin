@@ -9,7 +9,7 @@ Library             JSONLibrary
 
 
 *** Variables ***
-${BASE_URL}         ${EMPTY}
+${API_URL}          ${EMPTY}
 ${API_VERSION}      /v1
 ${RESPONSE}         ${null}
 
@@ -28,10 +28,10 @@ Restaurar Logs
 Conectar API
     Create Session
     ...                     FakeRestApi
-    ...                     ${BASE_URL}/${API_VERSION}
+    ...                     ${API_URL}/${API_VERSION}
     ...                     verify=False
     ...                     disable_warnings=1
-    Set Suite Variable      ${BASE_URL}
+    Set Suite Variable      ${API_URL}
 
 Desconectar Todas As Seções
     Delete All Sessions
