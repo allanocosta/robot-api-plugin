@@ -4,7 +4,7 @@ metadata:
   name: robot-api-plugin
   display-name: robot-api-plugin
   description: Plugin para testes de API's com a Library Requests
-  version: 0.0.1
+  version: 0.0.2
   picture: plugin.png
 spec:
   type: app
@@ -12,42 +12,13 @@ spec:
     - python
   about: docs/about.md
   implementation: docs/implementation.md
-  release-notes: docs/release-notes-0.0.1.md
+  release-notes: docs/release-notes.md
   requirements: docs/requirements.md
   single-use: False
   technologies: # Ref: https://docs.stackspot.com/create-use/create-content/yaml-files/plugin-yaml/#technologies-1
     - Python
   repository: https://github.com/allanocosta/robot-api-plugin.git
   stk-projects-only: false
-  inputs:
-    - label: Escreva o nome do seu projeto
-      type: text
-      name: project_name
-      required: true
-      default: project-name
-      help: 'Informe o nome do seu projeto (e.g.: Example Robot Framework Tests)'
-      global: true
-
-    - label: Informe a versão do projeto
-      type: text
-      name: project_version
-      default: 1.0.0
-      global: true
-      required: true
-
-    - label: Informe a descrição do projeto
-      type: text
-      name: project_description
-      default: Projeto de Testes com Robot Framework
-      required: true
-
-    - label: Informe o autor do projeto
-      type: text
-      name: project_author
-      required: true
-
-  global-computed-inputs:
-    project_id: "{{project_name|replace(' ','_')|replace('/','-')|replace('\\\\','-')}}"
 
   hooks:
     - type: run
