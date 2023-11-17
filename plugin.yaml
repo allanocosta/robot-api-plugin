@@ -22,6 +22,6 @@ spec:
 
   hooks:
     - type: run
-      trigger: before-render
+      trigger: after-render
       commands:
         - pip install -r api_requirements.txt
