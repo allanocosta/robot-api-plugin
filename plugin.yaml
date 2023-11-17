@@ -24,4 +24,4 @@ spec:
     - type: run
       trigger: after-render
       commands:
-        - pip install -r api_requirements.txt
+        - pip install robotframework-requests
