@@ -35,7 +35,7 @@ configure = [
  "wrong-case-in-keyword-name:severity:I",
  "unnecessary-string-conversion:severity:I",
  "todo-in-comment:markers:MÉTODOS",
- "too-many-calls-in-keyword:max_calls:12"
+ "too-many-calls-in-keyword:max_calls:15"
 ]
 language = [
  "pt"

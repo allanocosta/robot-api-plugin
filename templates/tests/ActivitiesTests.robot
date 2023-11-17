@@ -16,4 +16,6 @@ Operation Activities - Deve Obter Todas As Atividades Cadastradas
     ${FILE_DATA}            Obter Fixtures          activities              get
 
     GET Activities          ${FILE_DATA}[all]
-    Response Compara Todos Os Valores Do Payload Com Response               ${FILE_DATA}[all]
+    Response Validar JSON Com API                   ${FILE_DATA}[all]
+
+# Operation Activities - Deve

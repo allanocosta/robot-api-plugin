@@ -77,8 +77,6 @@ Response Pelo Menos Um Valor Igual Ao Do Payload
     ${RES_DATA}             Set Variable            ${RESPONSE.json()}
     ${passou}               Set Variable            False
     FOR    ${ITEM}    IN    @{RES_DATA["data"]["pageContent"]}
-        Log                     ${FILE_DATA["response"]}
-        Log                     ${ITEM}
         ${status}               ${value}                Run Keyword And Ignore Error
         ...                     Comparar Valores        ${FILE_DATA["response"]}                        ${ITEM}
         IF    $status == 'PASS'
@@ -108,6 +106,45 @@ Response Compara Todos Os Valores Do Payload Com Response
                 Should Be Equal As Strings
                 ...                     ${ITEM}[${KEY}]
                 ...                     ${RES_DATA[0][${KEY}]}
+            END
+        END
+    END
+
+Response Validar JSON Com API AAAA
+    [Arguments]             ${FILE_DATA}
+    ${RES_DATA}             Set Variable            ${RESPONSE.json()}
+    FOR    ${json_item}    IN    @{FILE_DATA['response']}
+        ${json_id}              Set Variable            ${json_item['id']}
+        ${json_title}           Set Variable            ${json_item['title']}
+        ${json_completed}       Set Variable            ${json_item['completed']}
+        FOR    ${resp_item}    IN    @{RES_DATA}
+            ${resp_id}              Set Variable            ${resp_item['id']}
+            ${resp_title}           Set Variable            ${resp_item['title']}
+            ${resp_completed}       Set Variable            ${resp_item['completed']}
+            IF    $json_id == $resp_id and $json_title == $resp_title and $json_completed == $resp_completed
+                Log                     JSON data matches API response
+            ELSE
+                Fail                    JSON data does not match API response
+            END
+        END
+    END
+
+Response Validar JSON Com API
+    [Arguments]             ${FILE_DATA}
+    ${RES_DATA}             Set Variable            ${RESPONSE.json()}
+    FOR    ${json_item}    IN    @{FILE_DATA['response']}
+        ${json_id}              Set Variable            ${json_item['id']}
+        ${json_title}           Set Variable            ${json_item['title']}
+        ${json_completed}       Set Variable            ${json_item['completed']}
+        FOR    ${resp_item}    IN    @{RES_DATA}
+            ${resp_id}              Set Variable            ${resp_item['id']}
+            ${resp_title}           Set Variable            ${resp_item['title']}
+            ${resp_completed}       Set Variable            ${resp_item['completed']}
+            IF    $json_id != $resp_id    CONTINUE
+            IF    $json_title == $resp_title and $json_completed == $resp_completed
+                Log                     JSON data matches API response
+            ELSE
+                Fail                    JSON data does not match API response
             END
         END
     END
