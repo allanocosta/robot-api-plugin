@@ -80,3 +80,6 @@ Thumbs.db
 .temp/
 backup/**/*
 backup
+
+# Excluded StackSpot Tests directories and files
+tests/test-case-apply-*/expected/**

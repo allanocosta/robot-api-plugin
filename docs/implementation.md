@@ -1,25 +1,16 @@
 ## Implementação
 
-Descreva todas as etapas para usar o Plugin:
-
-- Preencher entradas
-- Quais métodos usar
-- Quais são os recursos?
-- E se necessário, adicione outros recursos que dependem do tipo do seu Plugin.
-
-Veja um exemplo:
-
-Na pasta do seu aplicativo, aplique o **`plugin-doc-template`** para preencher os arquivos abaixo:
+Na pasta do seu aplicativo, aplique o **`robot-api-plugin`** para executar testes de APIs com Robot Framework conforme abaixo:
 
 1. Execute o comando:
 
 ```
-stk apply plugin /Users/Home/plugin-doc-template
+stk apply plugin allanpocosta/automation-mindset/robot-api-plugin
 ```
 
-2. Preencha as informações do Plugin seguindo os exemplos de modelo de arquivo:
+2. Preencha as informações do Plugin seguindo os exemplos abaixo:
 
-- `about.md`
-- `implementation.md`
-- `release-notes@plugin-version.md`
-- `requirements.md`
+- `project_name`: Nome do seu projeto
+- `project_version`: Versão do seu projeto
+- `project_description`: Descrição resumida do seu projeto
+- `project_author`: Autor do projeto

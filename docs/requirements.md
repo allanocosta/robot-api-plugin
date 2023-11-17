@@ -1,23 +1,24 @@
-## Antes de aplicar este Plugin
+### Pré-requisito
 
-- Descreva em uma lista todos os itens e ações necessárias antes de aplicar o Plugin.
-- Quando não houver ordem nas etapas, use uma lista não ordenada.
-- Se os passos estiverem em ordem, use uma lista ordenada (lista numerada).
+- Ter o [Python][Python] com o [pip][pip] intalado.
+- Ter uma conta na [StackSpot][StackSpot]
+- Ter o [StackSpot CLI][StackSpot_CLI] instalado
+- Ter o Plugin **`robot-framework-plugin`** aplicado
 
-Veja o exemplo:
+1. Aplique este Plugin com o comando abaixo
+```
+stk apply plugin allanpocosta/automation-mindset/robot-api-plugin
+```
+2. Preencha as informações do Plugin seguindo os exemplos abaixo:
+> `project_name`: Nome do seu projeto
 
-### Etapas não ordenadas
+> `project_version`: Versão do seu projeto
 
-#### Pré-requisito
+> `project_description`: Descrição resumida do seu projeto
 
-- Faça a ação X
-- Crie o arquivo de configuração
-- Renomeie o arquivo **`.env`**.
+> `project_author`: Autor do projeto
 
-### Passos ordenados
-
-#### Pré-requisito
-
-1. Instalar dependências
-2. Crie o arquivo de configuração
-3. Crie a pasta **`template`**.
+[StackSpot]: https://stackspot.com/pt/
+[StackSpot_CLI]: https://app.stackspot.com/pt/download-cli
+[Python]: https://www.python.org/
+[pip]: https://pip.pypa.io

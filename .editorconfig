@@ -1,0 +1,16 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+[*.{resource, robot}]
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+charset = utf-8
+end_of_line = crlf
+trim_trailing_whitespace = true
+
+[*.{yml,toml,json}]
+indent_style = space
+indent_size = 2

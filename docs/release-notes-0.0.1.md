@@ -1,33 +1,9 @@
-# Release Notes 0.0.1
+# robot-api-plugin v0.0.1 Implementação
 
-As releases notes devem incluir o seguinte:
-
-- Um cabeçalho de introdução e uma breve visão geral das mudanças.
-- Uma explicação clara dos usuários afetados.
-- Alterações nas notas de versão anteriores.
-- Aprimoramentos de recursos ou novos recursos/funcionalidades.
-- Problemas corrigidos.
-- Problemas/bloqueadores/dependências em andamento. Adicione um plano de como as mudanças acontecerão.
-
-Veja um exemplo:
-
-# plugin-doc-template v0.0.1 alterações
-
-O plugin-doc-template v0.0.1 adiciona instruções e exemplos sobre como escrever a documentação para Plugins no StackSpot.
+O robot-api-plugin v0.0.1 adiciona capacidade para testar APIs de aplicações.
 
 ## Novas funcionalidades
 
-- Adicionado um modelo para os seguintes documentos de Plugin:
-
-    - `about.md`
-    - `requirements.md`
-    - `implementation`
-    - `release-notes@plugin-version.md`
-
 ## Ajustes e correções
 
-- Corrigido o erro de digitação do modelo do Plugin.
-
 ## Mudanças
-
-- Alteradas as funções do Plugin.
