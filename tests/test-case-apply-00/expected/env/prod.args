@@ -1,0 +1,4 @@
+-d ./log
+-x output-xunit.xml
+-v BASE_URL:https://fakerestapi.azurewebsites.net/api
+--listener RetryFailed

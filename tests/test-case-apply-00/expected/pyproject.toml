@@ -1,0 +1,42 @@
+[tool.robotidy]
+diff = true
+spacecount = 4
+continuation-indent = 2
+line-length = 140
+transform = [
+	"AddMissingEnd",
+	"AlignKeywordsSection",
+	"AlignSettingsSection",
+	"AlignTestCasesSection",
+  "AlignVariablesSection",
+	"DiscardEmptySections",
+	"IndentNestedKeywords",
+	"MergeAndOrderSections",
+	"NormalizeNewLines",
+	"NormalizeSeparators",
+	"NormalizeSettingName",
+	"OrderSettings",
+	"OrderSettingsSection",
+  "SplitTooLongLine"
+]
+
+configure = [
+  "SplitTooLongLine:line_length=140"
+]
+
+[tool.robocop]
+exclude = [
+	"W0202",
+	"W0201",
+  "W0310"
+]
+configure = [
+ "line-too-long:line_length:140",
+ "wrong-case-in-keyword-name:severity:I",
+ "unnecessary-string-conversion:severity:I",
+ "todo-in-comment:markers:MÉTODOS",
+ "too-many-calls-in-keyword:max_calls:15"
+]
+language = [
+ "pt"
+]

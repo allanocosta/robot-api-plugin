@@ -4,8 +4,10 @@ spec:
   type: plugin
   mode: apply
   inputs:
-    resource: "Customer"
-    method: "PATCH"
+    project_name: "Project Robot Api Tests"
+    project_version: "1.0.0"
+    project_description: "Description of my Project Example"
+    project_author: "Author Test"
   inputs-envs: {}
   requires:
     connections: []

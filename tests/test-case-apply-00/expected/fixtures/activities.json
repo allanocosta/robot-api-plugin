@@ -1,0 +1,243 @@
+{
+  "get": {
+    "all": {
+      "statusCode": 200,
+      "payload": {},
+      "response": [
+        {
+          "id": 1,
+          "title": "Activity 1",
+          "dueDate": "2023-11-17T15:13:57.4428123+00:00",
+          "completed": true
+        },
+        {
+          "id": 2,
+          "title": "Activity 2",
+          "dueDate": "2023-11-17T16:13:57.4428148+00:00",
+          "completed": true
+        },
+        {
+          "id": 3,
+          "title": "Activity 3",
+          "dueDate": "2023-11-17T17:13:57.4428152+00:00",
+          "completed": false
+        },
+        {
+          "id": 4,
+          "title": "Activity 4",
+          "dueDate": "2023-11-17T18:13:57.4428155+00:00",
+          "completed": true
+        },
+        {
+          "id": 5,
+          "title": "Activity 5",
+          "dueDate": "2023-11-17T19:13:57.4428181+00:00",
+          "completed": false
+        },
+        {
+          "id": 6,
+          "title": "Activity 6",
+          "dueDate": "2023-11-17T20:13:57.442819+00:00",
+          "completed": true
+        },
+        {
+          "id": 7,
+          "title": "Activity 7",
+          "dueDate": "2023-11-17T21:13:57.4428194+00:00",
+          "completed": false
+        },
+        {
+          "id": 8,
+          "title": "Activity 8",
+          "dueDate": "2023-11-17T22:13:57.4428197+00:00",
+          "completed": true
+        },
+        {
+          "id": 9,
+          "title": "Activity 9",
+          "dueDate": "2023-11-17T23:13:57.44282+00:00",
+          "completed": false
+        },
+        {
+          "id": 10,
+          "title": "Activity 10",
+          "dueDate": "2023-11-18T00:13:57.4428206+00:00",
+          "completed": true
+        },
+        {
+          "id": 11,
+          "title": "Activity 11",
+          "dueDate": "2023-11-18T01:13:57.442821+00:00",
+          "completed": false
+        },
+        {
+          "id": 12,
+          "title": "Activity 12",
+          "dueDate": "2023-11-18T02:13:57.4428213+00:00",
+          "completed": true
+        },
+        {
+          "id": 13,
+          "title": "Activity 13",
+          "dueDate": "2023-11-18T03:13:57.4428216+00:00",
+          "completed": false
+        },
+        {
+          "id": 14,
+          "title": "Activity 14",
+          "dueDate": "2023-11-18T04:13:57.442822+00:00",
+          "completed": true
+        },
+        {
+          "id": 15,
+          "title": "Activity 15",
+          "dueDate": "2023-11-18T05:13:57.4428223+00:00",
+          "completed": false
+        },
+        {
+          "id": 16,
+          "title": "Activity 16",
+          "dueDate": "2023-11-18T06:13:57.4428226+00:00",
+          "completed": true
+        },
+        {
+          "id": 17,
+          "title": "Activity 17",
+          "dueDate": "2023-11-18T07:13:57.4428229+00:00",
+          "completed": false
+        },
+        {
+          "id": 18,
+          "title": "Activity 18",
+          "dueDate": "2023-11-18T08:13:57.4428234+00:00",
+          "completed": true
+        },
+        {
+          "id": 19,
+          "title": "Activity 19",
+          "dueDate": "2023-11-18T09:13:57.4428237+00:00",
+          "completed": false
+        },
+        {
+          "id": 20,
+          "title": "Activity 20",
+          "dueDate": "2023-11-18T10:13:57.4428241+00:00",
+          "completed": true
+        },
+        {
+          "id": 21,
+          "title": "Activity 21",
+          "dueDate": "2023-11-18T11:13:57.4428244+00:00",
+          "completed": false
+        },
+        {
+          "id": 22,
+          "title": "Activity 22",
+          "dueDate": "2023-11-18T12:13:57.4428247+00:00",
+          "completed": true
+        },
+        {
+          "id": 23,
+          "title": "Activity 23",
+          "dueDate": "2023-11-18T13:13:57.4428251+00:00",
+          "completed": false
+        },
+        {
+          "id": 24,
+          "title": "Activity 24",
+          "dueDate": "2023-11-18T14:13:57.4428254+00:00",
+          "completed": true
+        },
+        {
+          "id": 25,
+          "title": "Activity 25",
+          "dueDate": "2023-11-18T15:13:57.4428257+00:00",
+          "completed": false
+        },
+        {
+          "id": 26,
+          "title": "Activity 26",
+          "dueDate": "2023-11-18T16:13:57.4428261+00:00",
+          "completed": true
+        },
+        {
+          "id": 27,
+          "title": "Activity 27",
+          "dueDate": "2023-11-18T17:13:57.4428264+00:00",
+          "completed": false
+        },
+        {
+          "id": 28,
+          "title": "Activity 28",
+          "dueDate": "2023-11-18T18:13:57.4428267+00:00",
+          "completed": true
+        },
+        {
+          "id": 29,
+          "title": "Activity 29",
+          "dueDate": "2023-11-18T19:13:57.4428271+00:00",
+          "completed": false
+        },
+        {
+          "id": 30,
+          "title": "Activity 30",
+          "dueDate": "2023-11-18T20:13:57.4428274+00:00",
+          "completed": true
+        }
+      ]
+    },
+    "id_existente": {
+      "statusCode": 200,
+      "payload": {
+        "id": "27"
+      },
+      "response": {
+        "id": 27,
+        "title": "Activity 27",
+        "completed": false
+      }
+    },
+    "id_inexistente": {
+      "statusCode": 404,
+      "payload": {
+        "id": ""
+      },
+      "response": {
+        "title": "Not Found",
+        "status": 404
+      }
+    },
+    "id_invalido": {
+      "statusCode": 400,
+      "payload": {
+        "id": "XPTO"
+      },
+      "response": {
+        "title": "One or more validation errors occurred.",
+        "status": 400,
+        "errors": {
+          "id": [
+            "The value 'XPTO' is not valid."
+          ]
+        }
+      }
+    }
+  },
+  "post": {
+    "new_activity": {
+      "statusCode": 200,
+      "payload": {
+        "id": 31,
+        "title": "Atividade Teste QA",
+        "dueDate": "2023-09-12T00:00:00",
+        "completed": true
+      },
+      "response": {
+        "id": 31,
+        "title": "Atividade Teste QA",
+        "dueDate": "2023-09-12T00:00:00",
+        "completed": true
+      }
+    }
+  }
+}
