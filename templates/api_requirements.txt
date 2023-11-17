@@ -1,1 +1,1 @@
-robotframework-requests
+robotframework-requests>=0.9.6
