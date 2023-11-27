@@ -45,20 +45,26 @@ Response Body Deve Estar Vazio
 
 Response Validar JSON Com API
     [Arguments]             ${FILE_DATA}
+
     ${RES_DATA}             Set Variable            ${RESPONSE.json()}
+
     FOR    ${json_item}    IN    @{FILE_DATA['response']}
-        ${json_id}              Set Variable            ${json_item['id']}
-        ${json_title}           Set Variable            ${json_item['title']}
-        ${json_completed}       Set Variable            ${json_item['completed']}
         FOR    ${resp_item}    IN    @{RES_DATA}
+            ${json_id}              Set Variable            ${json_item['id']}
             ${resp_id}              Set Variable            ${resp_item['id']}
-            ${resp_title}           Set Variable            ${resp_item['title']}
-            ${resp_completed}       Set Variable            ${resp_item['completed']}
+
             IF    $json_id != $resp_id    CONTINUE
-            IF    $json_title == $resp_title and $json_completed == $resp_completed
-                Log                     JSON data matches API response
-            ELSE
-                Fail                    JSON data does not match API response
+            ${keys}                 Get Dictionary Keys     ${json_item}
+
+            FOR    ${key}    IN    @{keys}
+                ${json_value}           Get From Dictionary     ${json_item}            ${key}
+                ${resp_value}           Get From Dictionary     ${resp_item}            ${key}
+
+                IF    $json_value == $resp_value
+                    Log                     A chave ${key} do JSON corresponde é igual a resposta da API.
+                ELSE
+                    Fail                    A chave ${key} do JSON não corresponde a resposta da API.
+                END
             END
         END
     END

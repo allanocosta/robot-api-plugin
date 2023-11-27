@@ -16,4 +16,4 @@ Operation Activities - Deve Obter Todas As Atividades Cadastradas
     ${FILE_DATA}            Obter Fixtures          activities              get
 
     GET Activities          ${FILE_DATA}[all]
-    activities.Response Validar JSON Com API        ${FILE_DATA}[all]
+    Response Validar JSON Com API                   ${FILE_DATA}[all]
