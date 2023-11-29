@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Resource do Operation Log Acesso
 
-Resource            ${CURDIR}/../base.resource
+Resource            base.resource
 
 
 *** Variables ***
@@ -10,6 +10,34 @@ ${RESPONSE}     ${null}
 
 
 *** Keywords ***
+GET Activities
+    [Arguments]             ${DATA}
+
+    ${campo}                Set Variable            id
+    ${status_code}          Convert To String       ${DATA}[statusCode]
+
+    ${HEADERS}              Create Dictionary
+    ...                     accept=text/plain; v=1.0
+    ...                     Content-Type=application/json; v=1.0
+
+    IF    $campo in ${DATA}[payload]
+        ${RESPONSE}             GET On Session
+        ...                     FakeRestApi
+        ...                     /Activities/${DATA}[payload][id]
+        ...                     headers=${HEADERS}
+        ...                     expected_status=${status_code}
+
+        Set Test Variable       ${RESPONSE}
+    ELSE IF    $ID == ''
+        ${RESPONSE}             GET On Session
+        ...                     FakeRestApi
+        ...                     /Activities
+        ...                     headers=${HEADERS}
+        ...                     expected_status=${status_code}
+
+        Set Test Variable       ${RESPONSE}
+    END
+
 POST Activities
     ${HEADERS}              Create Dictionary       accept=text/plain; v=1.0                        Content-Type=application/json; v=1.0
     ${RESPONSE}             POST On Session
@@ -18,37 +46,15 @@ POST Activities
     ...                     headers=${HEADERS}
     Set Test Variable       ${RESPONSE}
 
-GET Activities
-    [Arguments]             ${FILE_DATA}
-
-    ${campo}                Set Variable            id
-    ${status_code}          Convert To String       ${FILE_DATA}[statusCode]
-
-    IF    $campo in ${FILE_DATA}[payload]
-        ${ID}                   Set Variable            ${FILE_DATA}[payload][id]
-    END
-
-    ${HEADERS}              Create Dictionary
-    ...                     accept=text/plain; v=1.0
-    ...                     Content-Type=application/json; v=1.0
-
-    ${RESPONSE}             GET On Session
-    ...                     FakeRestApi
-    ...                     /Activities/${ID}
-    ...                     headers=${HEADERS}
-    ...                     expected_status=${status_code}
-
-    Set Test Variable       ${RESPONSE}
-
 Response Body Deve Estar Vazio
     Should Be Empty         ${RESPONSE.text}
 
 Response Validar JSON Com API
-    [Arguments]             ${FILE_DATA}
+    [Arguments]             ${DATA}
 
     ${RES_DATA}             Set Variable            ${RESPONSE.json()}
 
-    FOR    ${json_item}    IN    @{FILE_DATA['response']}
+    FOR    ${json_item}    IN    @{DATA['response']}
         FOR    ${resp_item}    IN    @{RES_DATA}
             ${json_id}              Set Variable            ${json_item['id']}
             ${resp_id}              Set Variable            ${resp_item['id']}
