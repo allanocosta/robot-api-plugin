@@ -23,7 +23,7 @@ dist/**/*
 *.jar
 
 # Maven
-target/
+# target/
 dist/
 
 # JetBrains IDE
@@ -86,3 +86,4 @@ backup
 
 # Excluded StackSpot Tests directories and files
 tests/test-case-apply-*/expected/**/*
+tests/test-case-apply-*/expected/**/*.*
