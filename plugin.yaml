@@ -4,7 +4,7 @@ metadata:
   name: robot-api-plugin
   display-name: robot-api-plugin
   description: Plugin para testes de API's com a Library Requests
-  version: 0.0.5
+  version: 0.0.6
   picture: plugin.png
 spec:
   type: app
