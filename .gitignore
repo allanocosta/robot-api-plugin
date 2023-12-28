@@ -85,4 +85,4 @@ backup/**/*
 backup
 
 # Excluded StackSpot Tests directories and files
-tests/test-case-apply-*/expected/**/*
+tests/test-case-apply-*/expected/**/*.*

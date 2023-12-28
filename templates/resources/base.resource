@@ -49,12 +49,6 @@ Obter Fixtures
 
 # KEYWORDS GERAIS
 
-Response Deve Estar Vazio
-    Should Be Empty         ${RESPONSE.text}
-
-Response Não Deve Estar Vazio
-    Should Not Be Empty     ${RESPONSE.text}
-
 Comparar Valores
     [Arguments]             ${value1}               ${value2}
 
@@ -62,7 +56,7 @@ Comparar Valores
         Should Be Equal As Strings                      ${value1["${KEY}"]}     ${value2["${KEY}"]}
     END
 
-Response Pelo Menos Um Valor Igual Ao Do Payload
+Response Pelo Menos Um Valor Igual Ao Do JSON
     [Arguments]             ${FILE_DATA}
 
     ${RES_DATA}             Set Variable            ${RESPONSE.json()}
@@ -80,7 +74,7 @@ Response Pelo Menos Um Valor Igual Ao Do Payload
     Log                     ${value}
     Should Be True          ${passou}
 
-Response Todos Os Valores Devem Ser Iguais Ao Do Payload
+Response Todos Os Valores Devem Ser Iguais Ao Do JSON
     [Arguments]             ${FILE_DATA}
 
     ${RES_DATA}             Set Variable            ${RESPONSE.json()}
@@ -91,7 +85,7 @@ Response Todos Os Valores Devem Ser Iguais Ao Do Payload
         ...                     ${RES_DATA[0]["${KEY}"]}
     END
 
-Response Compara Todos Os Valores Do Payload Com Response
+Response Compara Todos Os Valores Do JSON Com Response
     [Arguments]             ${FILE_DATA}
 
     ${RES_DATA}             Set Variable            ${RESPONSE.json()}
