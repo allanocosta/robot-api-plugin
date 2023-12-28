@@ -2,6 +2,11 @@
 
 - v0.0.5 alterado o nome de algumas keywords para fazer mais sentido para quem for utilizar.
 
+# robot-api-plugin v0.0.4 Mudanças
+
+- v0.0.5 removido o diretório /resources/endpoint para melhorar o mapeamento dos resources.
+- Alteração no `.gitignore`.
+
 # robot-api-plugin v0.0.3 Mudanças
 
 - v0.0.3 adicionado novas keywords e removido outras que não faziam sentido no atual escopo.
